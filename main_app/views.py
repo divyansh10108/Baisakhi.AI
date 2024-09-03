@@ -39,7 +39,7 @@ X_crop = df_crop.drop(columns = 'label')
 y_crop = df_crop['label']
 X_train_crop, X_test_crop, y_train_crop, y_test_crop = train_test_split(X_crop, y_crop, test_size = 0.2, random_state=42)
 
-knn_crop = KNeighborsClassifier(n_neighbors=3)
+knn_crop = KNeighborsClassifier(n_neighbors=17)
 knn_crop.fit(X_train_crop, y_train_crop)
 ac_crop = round(knn_crop.score(X_test_crop, y_test_crop) * 100, 2)
 
